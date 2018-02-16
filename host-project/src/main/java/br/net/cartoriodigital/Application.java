@@ -12,6 +12,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InterruptedIOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
 import java.security.MessageDigest;
@@ -21,6 +23,7 @@ import java.security.PrivateKey;
 import java.security.Provider;
 import java.security.Security;
 import java.security.Signature;
+import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateEncodingException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
@@ -31,17 +34,21 @@ import java.util.Base64;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.logging.Level;
 
 import javax.naming.InvalidNameException;
 import javax.naming.ldap.LdapName;
 import javax.naming.ldap.Rdn;
 
+import org.demoiselle.signer.chain.icp.brasil.provider.impl.ICPBrasilUserHomeProviderCA;
+import org.demoiselle.signer.policy.engine.factory.PolicyFactory.Policies;
+import org.demoiselle.signer.policy.impl.cades.SignerAlgorithmEnum;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class Application {
 
-  private static final String PATH_LOG = "C:\\ext\\hostlog.txt";
+  private static final String PATH_LOG = "log_files/hostlog.txt";
 
   private final AtomicBoolean interrompe;
 
@@ -52,10 +59,14 @@ public class Application {
     this.interrompe = new AtomicBoolean(false);
   }
 
-  public static void main(String[] args) {
-    log("Starting the app...");
+  public static void main(String[] args) throws UnrecoverableKeyException, KeyStoreException, NoSuchAlgorithmException, IOException {
+	  
+		
+	log("Starting the app...");
 
     final Application app = new Application();
+    
+    System.out.println("çsaldkfjlçksadjp ouasf");
 
     ConnectableObservable<String> obs = app.getObservable();
     obs.observeOn(Schedulers.computation()).subscribe(new Observer<String>() {
@@ -68,6 +79,19 @@ public class Application {
       public void onNext(String s) {
 
         log("Host received " + s);
+        
+        String textToSign = "SIPAC Signer";
+    	String homeUser = ICPBrasilUserHomeProviderCA.PATH_HOME_USER;
+    	Path p7sFilePath = 
+    			Paths.get(homeUser, "textoAssinado." + Policies.AD_RB_CADES_2_0.toString() + ".p7s");
+    	
+    	try {
+			DemoiselleSigner.sign(textToSign, p7sFilePath, 
+					Policies.AD_RB_CADES_2_2, SignerAlgorithmEnum.SHA256withRSA);
+		} catch (UnrecoverableKeyException | KeyStoreException
+				| NoSuchAlgorithmException | IOException e1) {
+			e1.printStackTrace();
+		}
 
         JSONObject obj = new JSONObject(s);
 

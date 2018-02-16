@@ -11,11 +11,8 @@
   },
   "icons": {
   },
-  "externally_connectable": {
-    "matches": ["*://your.application.sistemas.api/*"]
-  },
   "permissions": [
-    "nativeMessaging",
-    "*://your.application.sistemas.api/*"
+    "nativeMessaging"
+    
   ]
 }

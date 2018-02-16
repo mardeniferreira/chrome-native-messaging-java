@@ -3,12 +3,12 @@ var extId = "knldjmfmopnpolahpmmgbagdohdnhkik";
 function sendExtMessageCert() {
     chrome.runtime.sendMessage(extId, {type: "cert"},
       function(response) {
-
-        if (!response.success)
+        console.log(response);
+       /* if (!response.success)
           console.log("worked");
 
         if (response.success)
-          alert('ok');
+          alert('ok');*/
 
         document.getElementById('response').innerHTML += "<p>" + JSON.stringify(response) + "</p>";
       });
@@ -17,11 +17,11 @@ function sendExtMessageCert() {
 function sendExtMessageSign() {
     chrome.runtime.sendMessage(extId, {type: "sign", content: "<signedingoajdkasd>", thumbprint: "c914cafe6b7ec2d01a0c709ec4e7a4afa0081e67"},
       function(response) {
-        if (!response.success)
+        /*if (!response.success)
           console.log("did not work");
 
         if (response.success)
-          alert('ok');
+          alert('ok');*/
 
         document.getElementById('response').innerHTML += "<p>" + JSON.stringify(response) + "</p>";
       });

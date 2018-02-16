@@ -4,6 +4,7 @@
 	<groupId>br.net.cartoriodigital</groupId>
 	<artifactId>signerChrome</artifactId>
 	<version>0.0.1</version>
+	<packaging>jar</packaging>
 	<name>Signer Complemento Chrome</name>
 	<description>Complemento que atua junto da API do Chrome Native Messaging para assinar documentos via browser</description>
 
@@ -17,6 +18,28 @@
 			<groupId>io.reactivex</groupId>
 			<artifactId>rxjava</artifactId>
 			<version>1.0.13</version>
+		</dependency>
+		<dependency>
+			<groupId>org.demoiselle.signer</groupId>
+			<artifactId>core</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.demoiselle.signer</groupId>
+			<artifactId>policy-impl-cades</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.demoiselle.signer</groupId>
+			<artifactId>chain-icp-brasil</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.5</version>
 		</dependency>
 	</dependencies>
 
