@@ -1,0 +1,125 @@
+2018-02-16 17:46:01 INFO  Configuration:167 - Driver carregado [TokenOuSmartCard_01]
+2018-02-16 17:46:04 INFO  CAManager:213 - Procurando certificado no Provider: Provedor OFFLINE de cadeias ICP-Brasil  (icpbrasil.jks)
+2018-02-16 17:46:04 INFO  CAManager:268 - Foram encontrados 4 níveis na cadeia do provider Provedor OFFLINE de cadeias ICP-Brasil  (icpbrasil.jks) 
+2018-02-16 17:46:04 INFO  BasicCertificate:568 - Adicionando a url http://repositorio.serpro.gov.br/lcr/acserproacfv4.crl
+2018-02-16 17:46:04 INFO  BasicCertificate:568 - Adicionando a url http://certificados2.serpro.gov.br/lcr/acserproacfv4.crl
+2018-02-16 17:46:04 INFO  BasicCertificate:568 - Adicionando a url http://repositorio.icpbrasil.gov.br/lcr/serpro/acserproacfv4.crl
+2018-02-16 17:46:05 INFO  OnLineCRLRepository:85 - Foi encontrada uma LCR válida: http://repositorio.serpro.gov.br/lcr/acserproacfv4.crl
+2018-02-16 17:46:05 INFO  CAdESSigner:579 - OID do algoritmo que irá gerar assinatura: 1.2.840.113549.1.1.11
+2018-02-16 17:46:05 INFO  CAdESSigner:580 - Nome do  algoritmo que irá gerar a assinatura : SHA256withRSA
+2018-02-16 17:46:05 INFO  CAdESSigner:582 - Algoritmo padrão contido na política:  1.2.840.113549.1.1.11
+2018-02-16 17:46:05 INFO  CAdESSigner:584 - Tamanho mínimo para chave:  2,048
+2018-02-16 17:46:05 INFO  CAdESSigner:587 - Validando o tamanho da chave.
+2018-02-16 17:46:05 INFO  CAdESSigner:599 - Efetuando a verificação dos atributos assinados
+2018-02-16 17:46:05 INFO  AttributeFactory:68 - Consultando o atributo com OID [1.2.840.113549.1.9.3]
+2018-02-16 17:46:05 INFO  AttributeFactory:73 - Retornando o atributo : org.demoiselle.signer.policy.impl.cades.pkcs7.attribute.impl.ContentType
+2018-02-16 17:46:05 INFO  AttributeFactory:68 - Consultando o atributo com OID [1.2.840.113549.1.9.4]
+2018-02-16 17:46:05 INFO  AttributeFactory:73 - Retornando o atributo : org.demoiselle.signer.policy.impl.cades.pkcs7.attribute.impl.MessageDigest
+2018-02-16 17:46:05 INFO  AttributeFactory:68 - Consultando o atributo com OID [1.2.840.113549.1.9.16.2.47]
+2018-02-16 17:46:05 INFO  AttributeFactory:73 - Retornando o atributo : org.demoiselle.signer.policy.impl.cades.pkcs7.attribute.impl.SigningCertificateV2
+2018-02-16 17:46:05 INFO  AttributeFactory:68 - Consultando o atributo com OID [1.2.840.113549.1.9.16.2.15]
+2018-02-16 17:46:05 INFO  AttributeFactory:73 - Retornando o atributo : org.demoiselle.signer.policy.impl.cades.pkcs7.attribute.impl.IdSigningPolicy
+2018-02-16 17:46:05 INFO  CAdESSigner:631 - Ponto de Confiança ... CN=Autoridade Certificadora Raiz Brasileira v5, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR
+2018-02-16 17:46:05 INFO  CAdESSigner:631 - Ponto de Confiança ... CN=Autoridade Certificadora Raiz Brasileira v2, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR
+2018-02-16 17:46:05 INFO  CAdESSigner:643 - CN=Autoridade Certificadora SERPRO v3, OU=Autoridade Certificadora Raiz Brasileira v2, O=ICP-Brasil, C=BR
+2018-02-16 17:46:05 INFO  CAdESSigner:643 - CN=Autoridade Certificadora Raiz Brasileira v2, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR
+2018-02-16 17:46:05 INFO  CAdESSigner:643 - CN=Autoridade Certificadora Raiz Brasileira v2, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR
+2018-02-16 17:46:05 INFO  CAdESSigner:643 - CN=Autoridade Certificadora do SERPRO Final v4, OU=Servico Federal de Processamento de Dados - SERPRO, OU=CSPB-1, O=ICP-Brasil, C=BR
+2018-02-16 17:46:05 INFO  CAdESSigner:649 - O certificado pertence a cadeia CN=Autoridade Certificadora Raiz Brasileira v2, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR que é permitida pela política  para gerar a assinatura.
+2018-02-16 17:46:05 INFO  CAdESSigner:659 - Verificando o período de validade da politica
+2018-02-16 17:46:05 INFO  CAdESSigner:352 - Adicionando Certificado no CertStore
+2018-02-16 17:46:05 INFO  CAdESSigner:667 - OID do algoritmo que irá gerar assinatura: 1.2.840.113549.1.1.11
+2018-02-19 14:05:13 INFO  Configuration:167 - Driver carregado [TokenOuSmartCard_01]
+2018-02-19 14:05:57 INFO  Configuration:167 - Driver carregado [TokenOuSmartCard_01]
+2018-02-19 14:06:00 INFO  CAManager:213 - Procurando certificado no Provider: Provedor OFFLINE de cadeias ICP-Brasil  (icpbrasil.jks)
+2018-02-19 14:06:00 INFO  CAManager:268 - Foram encontrados 4 níveis na cadeia do provider Provedor OFFLINE de cadeias ICP-Brasil  (icpbrasil.jks) 
+2018-02-19 14:06:00 INFO  BasicCertificate:568 - Adicionando a url http://repositorio.serpro.gov.br/lcr/acserproacfv4.crl
+2018-02-19 14:06:00 INFO  BasicCertificate:568 - Adicionando a url http://certificados2.serpro.gov.br/lcr/acserproacfv4.crl
+2018-02-19 14:06:00 INFO  BasicCertificate:568 - Adicionando a url http://repositorio.icpbrasil.gov.br/lcr/serpro/acserproacfv4.crl
+2018-02-19 14:06:01 INFO  OnLineCRLRepository:85 - Foi encontrada uma LCR válida: http://repositorio.serpro.gov.br/lcr/acserproacfv4.crl
+2018-02-19 14:06:01 INFO  CAdESSigner:579 - OID do algoritmo que irá gerar assinatura: 1.2.840.113549.1.1.11
+2018-02-19 14:06:01 INFO  CAdESSigner:580 - Nome do  algoritmo que irá gerar a assinatura : SHA256withRSA
+2018-02-19 14:06:01 INFO  CAdESSigner:582 - Algoritmo padrão contido na política:  1.2.840.113549.1.1.11
+2018-02-19 14:06:01 INFO  CAdESSigner:584 - Tamanho mínimo para chave:  2,048
+2018-02-19 14:06:01 INFO  CAdESSigner:587 - Validando o tamanho da chave.
+2018-02-19 14:06:01 INFO  CAdESSigner:599 - Efetuando a verificação dos atributos assinados
+2018-02-19 14:06:01 INFO  AttributeFactory:68 - Consultando o atributo com OID [1.2.840.113549.1.9.3]
+2018-02-19 14:06:01 INFO  AttributeFactory:73 - Retornando o atributo : org.demoiselle.signer.policy.impl.cades.pkcs7.attribute.impl.ContentType
+2018-02-19 14:06:01 INFO  AttributeFactory:68 - Consultando o atributo com OID [1.2.840.113549.1.9.4]
+2018-02-19 14:06:01 INFO  AttributeFactory:73 - Retornando o atributo : org.demoiselle.signer.policy.impl.cades.pkcs7.attribute.impl.MessageDigest
+2018-02-19 14:06:01 INFO  AttributeFactory:68 - Consultando o atributo com OID [1.2.840.113549.1.9.16.2.47]
+2018-02-19 14:06:01 INFO  AttributeFactory:73 - Retornando o atributo : org.demoiselle.signer.policy.impl.cades.pkcs7.attribute.impl.SigningCertificateV2
+2018-02-19 14:06:01 INFO  AttributeFactory:68 - Consultando o atributo com OID [1.2.840.113549.1.9.16.2.15]
+2018-02-19 14:06:01 INFO  AttributeFactory:73 - Retornando o atributo : org.demoiselle.signer.policy.impl.cades.pkcs7.attribute.impl.IdSigningPolicy
+2018-02-19 14:06:01 INFO  CAdESSigner:631 - Ponto de Confiança ... CN=Autoridade Certificadora Raiz Brasileira v5, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR
+2018-02-19 14:06:01 INFO  CAdESSigner:631 - Ponto de Confiança ... CN=Autoridade Certificadora Raiz Brasileira v2, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR
+2018-02-19 14:06:01 INFO  CAdESSigner:643 - CN=Autoridade Certificadora SERPRO v3, OU=Autoridade Certificadora Raiz Brasileira v2, O=ICP-Brasil, C=BR
+2018-02-19 14:06:01 INFO  CAdESSigner:643 - CN=Autoridade Certificadora Raiz Brasileira v2, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR
+2018-02-19 14:06:01 INFO  CAdESSigner:643 - CN=Autoridade Certificadora Raiz Brasileira v2, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR
+2018-02-19 14:06:01 INFO  CAdESSigner:643 - CN=Autoridade Certificadora do SERPRO Final v4, OU=Servico Federal de Processamento de Dados - SERPRO, OU=CSPB-1, O=ICP-Brasil, C=BR
+2018-02-19 14:06:01 INFO  CAdESSigner:649 - O certificado pertence a cadeia CN=Autoridade Certificadora Raiz Brasileira v2, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR que é permitida pela política  para gerar a assinatura.
+2018-02-19 14:06:01 INFO  CAdESSigner:659 - Verificando o período de validade da politica
+2018-02-19 14:06:01 INFO  CAdESSigner:352 - Adicionando Certificado no CertStore
+2018-02-19 14:06:01 INFO  CAdESSigner:667 - OID do algoritmo que irá gerar assinatura: 1.2.840.113549.1.1.11
+2018-02-19 14:07:24 INFO  Configuration:167 - Driver carregado [TokenOuSmartCard_01]
+2018-02-19 14:07:27 INFO  CAManager:213 - Procurando certificado no Provider: Provedor OFFLINE de cadeias ICP-Brasil  (icpbrasil.jks)
+2018-02-19 14:07:28 INFO  CAManager:268 - Foram encontrados 4 níveis na cadeia do provider Provedor OFFLINE de cadeias ICP-Brasil  (icpbrasil.jks) 
+2018-02-19 14:07:28 INFO  BasicCertificate:568 - Adicionando a url http://repositorio.serpro.gov.br/lcr/acserproacfv4.crl
+2018-02-19 14:07:28 INFO  BasicCertificate:568 - Adicionando a url http://certificados2.serpro.gov.br/lcr/acserproacfv4.crl
+2018-02-19 14:07:28 INFO  BasicCertificate:568 - Adicionando a url http://repositorio.icpbrasil.gov.br/lcr/serpro/acserproacfv4.crl
+2018-02-19 14:07:28 INFO  OnLineCRLRepository:85 - Foi encontrada uma LCR válida: http://repositorio.serpro.gov.br/lcr/acserproacfv4.crl
+2018-02-19 14:07:28 INFO  CAdESSigner:579 - OID do algoritmo que irá gerar assinatura: 1.2.840.113549.1.1.11
+2018-02-19 14:07:28 INFO  CAdESSigner:580 - Nome do  algoritmo que irá gerar a assinatura : SHA256withRSA
+2018-02-19 14:07:28 INFO  CAdESSigner:582 - Algoritmo padrão contido na política:  1.2.840.113549.1.1.11
+2018-02-19 14:07:28 INFO  CAdESSigner:584 - Tamanho mínimo para chave:  2,048
+2018-02-19 14:07:28 INFO  CAdESSigner:587 - Validando o tamanho da chave.
+2018-02-19 14:07:28 INFO  CAdESSigner:599 - Efetuando a verificação dos atributos assinados
+2018-02-19 14:07:28 INFO  AttributeFactory:68 - Consultando o atributo com OID [1.2.840.113549.1.9.3]
+2018-02-19 14:07:28 INFO  AttributeFactory:73 - Retornando o atributo : org.demoiselle.signer.policy.impl.cades.pkcs7.attribute.impl.ContentType
+2018-02-19 14:07:28 INFO  AttributeFactory:68 - Consultando o atributo com OID [1.2.840.113549.1.9.4]
+2018-02-19 14:07:28 INFO  AttributeFactory:73 - Retornando o atributo : org.demoiselle.signer.policy.impl.cades.pkcs7.attribute.impl.MessageDigest
+2018-02-19 14:07:28 INFO  AttributeFactory:68 - Consultando o atributo com OID [1.2.840.113549.1.9.16.2.47]
+2018-02-19 14:07:28 INFO  AttributeFactory:73 - Retornando o atributo : org.demoiselle.signer.policy.impl.cades.pkcs7.attribute.impl.SigningCertificateV2
+2018-02-19 14:07:28 INFO  AttributeFactory:68 - Consultando o atributo com OID [1.2.840.113549.1.9.16.2.15]
+2018-02-19 14:07:28 INFO  AttributeFactory:73 - Retornando o atributo : org.demoiselle.signer.policy.impl.cades.pkcs7.attribute.impl.IdSigningPolicy
+2018-02-19 14:07:28 INFO  CAdESSigner:631 - Ponto de Confiança ... CN=Autoridade Certificadora Raiz Brasileira v5, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR
+2018-02-19 14:07:28 INFO  CAdESSigner:631 - Ponto de Confiança ... CN=Autoridade Certificadora Raiz Brasileira v2, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR
+2018-02-19 14:07:28 INFO  CAdESSigner:643 - CN=Autoridade Certificadora SERPRO v3, OU=Autoridade Certificadora Raiz Brasileira v2, O=ICP-Brasil, C=BR
+2018-02-19 14:07:28 INFO  CAdESSigner:643 - CN=Autoridade Certificadora Raiz Brasileira v2, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR
+2018-02-19 14:07:28 INFO  CAdESSigner:643 - CN=Autoridade Certificadora Raiz Brasileira v2, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR
+2018-02-19 14:07:28 INFO  CAdESSigner:643 - CN=Autoridade Certificadora do SERPRO Final v4, OU=Servico Federal de Processamento de Dados - SERPRO, OU=CSPB-1, O=ICP-Brasil, C=BR
+2018-02-19 14:07:28 INFO  CAdESSigner:649 - O certificado pertence a cadeia CN=Autoridade Certificadora Raiz Brasileira v2, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR que é permitida pela política  para gerar a assinatura.
+2018-02-19 14:07:28 INFO  CAdESSigner:659 - Verificando o período de validade da politica
+2018-02-19 14:07:28 INFO  CAdESSigner:352 - Adicionando Certificado no CertStore
+2018-02-19 14:07:28 INFO  CAdESSigner:667 - OID do algoritmo que irá gerar assinatura: 1.2.840.113549.1.1.11
+2018-02-19 14:48:55 INFO  Configuration:167 - Driver carregado [TokenOuSmartCard_01]
+2018-02-19 14:48:58 INFO  CAManager:213 - Procurando certificado no Provider: Provedor OFFLINE de cadeias ICP-Brasil  (icpbrasil.jks)
+2018-02-19 14:48:58 INFO  CAManager:268 - Foram encontrados 4 níveis na cadeia do provider Provedor OFFLINE de cadeias ICP-Brasil  (icpbrasil.jks) 
+2018-02-19 14:48:58 INFO  BasicCertificate:568 - Adicionando a url http://repositorio.serpro.gov.br/lcr/acserproacfv4.crl
+2018-02-19 14:48:58 INFO  BasicCertificate:568 - Adicionando a url http://certificados2.serpro.gov.br/lcr/acserproacfv4.crl
+2018-02-19 14:48:58 INFO  BasicCertificate:568 - Adicionando a url http://repositorio.icpbrasil.gov.br/lcr/serpro/acserproacfv4.crl
+2018-02-19 14:48:59 INFO  OnLineCRLRepository:85 - Foi encontrada uma LCR válida: http://repositorio.serpro.gov.br/lcr/acserproacfv4.crl
+2018-02-19 14:48:59 INFO  CAdESSigner:579 - OID do algoritmo que irá gerar assinatura: 1.2.840.113549.1.1.11
+2018-02-19 14:48:59 INFO  CAdESSigner:580 - Nome do  algoritmo que irá gerar a assinatura : SHA256withRSA
+2018-02-19 14:48:59 INFO  CAdESSigner:582 - Algoritmo padrão contido na política:  1.2.840.113549.1.1.11
+2018-02-19 14:48:59 INFO  CAdESSigner:584 - Tamanho mínimo para chave:  2,048
+2018-02-19 14:48:59 INFO  CAdESSigner:587 - Validando o tamanho da chave.
+2018-02-19 14:48:59 INFO  CAdESSigner:599 - Efetuando a verificação dos atributos assinados
+2018-02-19 14:48:59 INFO  AttributeFactory:68 - Consultando o atributo com OID [1.2.840.113549.1.9.3]
+2018-02-19 14:48:59 INFO  AttributeFactory:73 - Retornando o atributo : org.demoiselle.signer.policy.impl.cades.pkcs7.attribute.impl.ContentType
+2018-02-19 14:48:59 INFO  AttributeFactory:68 - Consultando o atributo com OID [1.2.840.113549.1.9.4]
+2018-02-19 14:48:59 INFO  AttributeFactory:73 - Retornando o atributo : org.demoiselle.signer.policy.impl.cades.pkcs7.attribute.impl.MessageDigest
+2018-02-19 14:48:59 INFO  AttributeFactory:68 - Consultando o atributo com OID [1.2.840.113549.1.9.16.2.47]
+2018-02-19 14:48:59 INFO  AttributeFactory:73 - Retornando o atributo : org.demoiselle.signer.policy.impl.cades.pkcs7.attribute.impl.SigningCertificateV2
+2018-02-19 14:48:59 INFO  AttributeFactory:68 - Consultando o atributo com OID [1.2.840.113549.1.9.16.2.15]
+2018-02-19 14:48:59 INFO  AttributeFactory:73 - Retornando o atributo : org.demoiselle.signer.policy.impl.cades.pkcs7.attribute.impl.IdSigningPolicy
+2018-02-19 14:48:59 INFO  CAdESSigner:631 - Ponto de Confiança ... CN=Autoridade Certificadora Raiz Brasileira v5, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR
+2018-02-19 14:48:59 INFO  CAdESSigner:631 - Ponto de Confiança ... CN=Autoridade Certificadora Raiz Brasileira v2, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR
+2018-02-19 14:48:59 INFO  CAdESSigner:643 - CN=Autoridade Certificadora SERPRO v3, OU=Autoridade Certificadora Raiz Brasileira v2, O=ICP-Brasil, C=BR
+2018-02-19 14:48:59 INFO  CAdESSigner:643 - CN=Autoridade Certificadora Raiz Brasileira v2, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR
+2018-02-19 14:48:59 INFO  CAdESSigner:643 - CN=Autoridade Certificadora Raiz Brasileira v2, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR
+2018-02-19 14:48:59 INFO  CAdESSigner:643 - CN=Autoridade Certificadora do SERPRO Final v4, OU=Servico Federal de Processamento de Dados - SERPRO, OU=CSPB-1, O=ICP-Brasil, C=BR
+2018-02-19 14:48:59 INFO  CAdESSigner:649 - O certificado pertence a cadeia CN=Autoridade Certificadora Raiz Brasileira v2, OU=Instituto Nacional de Tecnologia da Informacao - ITI, O=ICP-Brasil, C=BR que é permitida pela política  para gerar a assinatura.
+2018-02-19 14:48:59 INFO  CAdESSigner:659 - Verificando o período de validade da politica
+2018-02-19 14:48:59 INFO  CAdESSigner:352 - Adicionando Certificado no CertStore
+2018-02-19 14:48:59 INFO  CAdESSigner:667 - OID do algoritmo que irá gerar assinatura: 1.2.840.113549.1.1.11

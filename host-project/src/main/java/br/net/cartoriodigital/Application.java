@@ -23,6 +23,7 @@ import java.security.PrivateKey;
 import java.security.Provider;
 import java.security.Security;
 import java.security.Signature;
+import java.security.SignatureException;
 import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateEncodingException;
 import java.security.cert.CertificateException;
@@ -59,14 +60,30 @@ public class Application {
     this.interrompe = new AtomicBoolean(false);
   }
 
-  public static void main(String[] args) throws UnrecoverableKeyException, KeyStoreException, NoSuchAlgorithmException, IOException {
+
+  private static void assinarHash(String hashParaAssinar) {
+	  
+	  String homeUser = ICPBrasilUserHomeProviderCA.PATH_HOME_USER;
+	  Path p7sFilePath = 
+  			Paths.get(homeUser, "hashAssinado." + Policies.AD_RB_CADES_2_0.toString() + ".p7s");
+  	
+	  try {
+		  DemoiselleSigner.sign(hashParaAssinar, p7sFilePath, 
+				Policies.AD_RB_CADES_2_2, SignerAlgorithmEnum.SHA256withRSA);
+	  } catch (UnrecoverableKeyException | KeyStoreException | NoSuchAlgorithmException | 
+			  		IOException | SignatureException e) {
+		  // TODO Auto-generated catch block
+		  e.printStackTrace();
+	  }
+	 
+  }
+  
+  public static void main(String[] args) {
 	  
 		
 	log("Starting the app...");
 
     final Application app = new Application();
-    
-    System.out.println("çsaldkfjlçksadjp ouasf");
 
     ConnectableObservable<String> obs = app.getObservable();
     obs.observeOn(Schedulers.computation()).subscribe(new Observer<String>() {
@@ -77,25 +94,19 @@ public class Application {
       }
 
       public void onNext(String s) {
-
+    	  
         log("Host received " + s);
-        
-        String textToSign = "SIPAC Signer";
-    	String homeUser = ICPBrasilUserHomeProviderCA.PATH_HOME_USER;
-    	Path p7sFilePath = 
-    			Paths.get(homeUser, "textoAssinado." + Policies.AD_RB_CADES_2_0.toString() + ".p7s");
     	
-    	try {
-			DemoiselleSigner.sign(textToSign, p7sFilePath, 
-					Policies.AD_RB_CADES_2_2, SignerAlgorithmEnum.SHA256withRSA);
-		} catch (UnrecoverableKeyException | KeyStoreException
-				| NoSuchAlgorithmException | IOException e1) {
-			e1.printStackTrace();
-		}
+        //log(demoiselleAssinar());
 
         JSONObject obj = new JSONObject(s);
-
-        if (obj.getString("type").equals("sign")) {
+        if (obj.getString("acao").equals("sign")) {
+        	String hashPreComputado = obj.getString("hashBase64");
+        	log(hashPreComputado);
+        	assinarHash(hashPreComputado);
+        }
+        
+        if (obj.getString("text").equals("sign---")) {
           // Carrega provider
           try {
             for (int i = 1; i < 11; i++) {

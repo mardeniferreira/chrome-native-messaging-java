@@ -88,6 +88,8 @@
 					</execution>
 				</executions>
 				<configuration>
+				
+					<shadedArtifactAttached>true</shadedArtifactAttached>
 					<artifactSet>
 						<includes>
 							<include>br.net.cartoriodigital.*:*</include>

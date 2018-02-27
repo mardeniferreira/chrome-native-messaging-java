@@ -4,18 +4,18 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
+import java.security.SignatureException;
 import java.security.UnrecoverableKeyException;
 import java.security.cert.Certificate;
 import java.security.cert.X509Certificate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.demoiselle.signer.chain.icp.brasil.provider.impl.ICPBrasilUserHomeProviderCA;
+import org.bouncycastle.util.encoders.Base64;
 import org.demoiselle.signer.core.keystore.loader.KeyStoreLoader;
 import org.demoiselle.signer.core.keystore.loader.factory.KeyStoreLoaderFactory;
 import org.demoiselle.signer.policy.engine.factory.PolicyFactory.Policies;
@@ -36,18 +36,15 @@ public class DemoiselleSigner {
 	public static String password;
 	public static Certificate[] certificateChain;
 
-	public static void sign(String text, Path pathP7s, Policies police, SignerAlgorithmEnum algorithm)
-			throws KeyStoreException, IOException, UnrecoverableKeyException, NoSuchAlgorithmException {
+	public static void sign(String hashBase64, Path pathP7s, Policies police, SignerAlgorithmEnum algorithm)
+			throws KeyStoreException, IOException, UnrecoverableKeyException, NoSuchAlgorithmException, SignatureException {
 
 		LOGGER.log(Level.INFO, "===== " + police.toString() + " =====");
-
-		byte[] content = text.getBytes();
-
+		
+		//Converte o hash retornado pelo SIPAC em Base64 para o formato aceito pelo demoiselle - byte[]
+		byte[] hashBytes = Base64.decode(hashBase64);//getDecoder().decode(hashBase64);
+		
 		PKCS7Signer signer = PKCS7Factory.getInstance().factoryDefault();
-
-		// if (pinHandler == null) {
-		// pinHandler = new PinHandler("Ações");
-		// }
 
 		if (keyStoreLoader == null) {
 			keyStoreLoader = KeyStoreLoaderFactory.factoryKeyStoreLoader();
@@ -65,12 +62,12 @@ public class DemoiselleSigner {
 		signer.setSignaturePolicy(police);
 		signer.setAlgorithm(algorithm);
 
-		byte[] sign = signer.doAttachedSign(content);
+		byte[] sign = signer.doHashSign(hashBytes);
 
 		System.out.println(">>>>>>>>>> Validando a assinatura");
 
 		// Valida
-		signer.checkAttachedSignature(sign);
+		//signer.checkAttachedSignature(sign);
 
 		ByteArrayInputStream bis = new ByteArrayInputStream(sign);
 

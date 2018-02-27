@@ -1,6 +1,0 @@
-2018/02/16 12:35:06: The size is 0
-2018/02/16 12:35:06: Blocked communication
-2018/02/16 12:35:06: App closed.
-2018/02/16 12:35:06: The size is 0
-2018/02/16 12:35:06: Blocked communication
-2018/02/16 12:35:06: App closed.
